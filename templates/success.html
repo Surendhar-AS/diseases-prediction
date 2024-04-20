@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/success.css') }}">
+
+<body>
+    <div class="login-container ">
+    <h2 class="login-heading ">OTP Verification</h2>
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+                {% for message in messages %}
+                    {% if "OTP does not match" in message %}
+                        <p style="color: red;">{{ message }}</p>
+                    {% else %}
+                        <p style="color: green;">{{ message }}</p>
+                    {% endif %}
+                {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="post">
+        <input type="text" class="input-field1" id="doctor_id" name="doctor_id" value="{{ session.user }}" readonly><br><br>
+        <input type="text" class="input-field1" id="email" name="email" value="{{ session.email }}" readonly><br><br>
+        <input type="text" class="input-field1" id="phone" name="phone" value="{{ session.phone }}" readonly><br><br>
+        <input type="text" class="input-field" id="otp" name="otp" placeholder="Enter OTP">
+        <input type="submit" value="verify OTP" class="login-btn">
+    </form>
+
+</div>
+</body>
+</html>

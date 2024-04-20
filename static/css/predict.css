@@ -1,0 +1,336 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image:url("../images/predict_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+.form-box{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 650px;
+height: 450px;
+border-radius: 15px;
+background: #0f4294;
+text-align: center;
+font-family: "Bangers", cursive;
+color: #60cf38; 
+opacity: 0.5;
+}
+  /* Style for the custom readonly textarea */
+  .custom-textarea {
+    position: absolute;
+    top:125px;
+    left: 40px;
+    width: 260px;
+    height: 155px;
+    overflow: auto;
+    resize: none;
+    cursor: default;
+    border: 10px solid #000000;
+    border-top: none;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  .output{
+    border-top-right-radius: 10px;
+    position: absolute;
+    top:74px;
+    left: 330px;
+    width: 232px;
+    height: 195px;
+    overflow: auto;
+    resize: none;
+    cursor: default;
+    border: 10px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  .Symptoms{
+    border-top-left-radius: 10px;
+    position: absolute;
+    top:74px;
+    left: 40px;
+    width: 260px;
+    height: 45px;
+    overflow: auto;
+    resize: none;
+    cursor: default;
+    border: 10px solid #000000;
+    border-bottom: none;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+ div.predict-btn {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    left: 40px;
+    width: 532px;
+    height: 46px;
+    border: 10px solid #000000;
+    background-color: rgba(255, 0, 0, 0.84);
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1;  /* Set the position to relative to establish a stacking context */
+}
+div#first{
+  top:296px;
+}
+div#sec{
+  top:540px;
+}
+div#third{
+  top:500px;
+}
+
+  /* Style to highlight selected text */
+  .highlight {
+    background-color: red;
+    color: white;
+  }
+  .login_details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: rgb(246, 227, 227);
+    width: 100%;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: blue;
+}
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 180px;
+  height: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 40px;
+  right: 0;
+  font-family:"Abel", cursive;
+}
+
+/* Style the logout icon */
+.logout-icon {
+  width: 30px; 
+  border-radius: 8px;
+  margin-left: 5px;
+}
+.add-icon {
+  position:absolute;
+  width: 30px;
+  right: 4px;
+  top:3px;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.round-frame {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    width: 100px; /* Adjust width and height as needed */
+    height: 100px;
+    border-radius: 50%; /* This makes the frame round */
+    overflow: hidden; /* Clips the image to the rounded border */
+    border: 5px solid #fff; /* Optional: add border to make the frame visible */
+  }
+
+  .round-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%; /* This ensures the image is also rounded */
+    object-fit: cover; /* Ensures the image fills the frame */
+  }
+  .login_info{
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    width: 150px;
+    height: 100px;
+  }
+  .input-field {
+  position:absolute;
+  left:4px;
+  top: 4px;
+  width: 81%;
+  height: 30px;
+  border: 3px solid #c1d58cb1;
+  background: #C2D58C;
+  color: #000000;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.input-field:focus{
+  outline-style: none;
+  border-color:3px solid #c1d58cc4;
+  color: black; 
+  font-weight: bold;
+  font-family:"Abel", cursive;
+  box-shadow: none;
+}
+.add_btn{
+  position:absolute;
+  left:2px;
+  top:3px;
+  height:26px;
+  width: 260px;
+  background-color: #C2D58C;
+  position: absolute;
+  overflow: auto;
+  resize: none;
+  cursor: default;
+  border: 3px solid #000000;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.delete_btn{
+  position:absolute;
+  left:280px;
+  top:3px;
+  height:26px;
+  width: 112px;
+  background-color: #C2D58C;
+  position: absolute;
+  overflow: auto;
+  resize: none;
+  cursor: default;
+  border: 3px solid #000000;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.reset_btn{
+  position:absolute;
+  left:410px;
+  top:3px;
+  height:26px;
+  width: 30px;
+  background-color: #C2D58C;
+  position: absolute;
+  overflow: auto;
+  resize: none;
+  cursor: default;
+  border: 3px solid #000000;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.predict_btn{
+  position:absolute;
+  left:458px;
+  top:3px;
+  height:41px;
+  width: 70px;
+  background-color: #C2D58C;
+  position: absolute;
+  overflow: auto;
+  resize: none;
+  cursor: default;
+  border: 3px solid #000000;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.logout_btn{
+  position:absolute;
+  left:20px;
+  top:50px;
+  height:24px;
+  width: 74px;
+  background-color: rgb(255, 40, 40);
+  position: absolute;
+  overflow: auto;
+  resize: none;
+  cursor: default;
+  border: 3px solid #000000;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.up-icon {
+  position:absolute;
+  width: 19px;
+  right: 4px;
+  top:3px;
+}
+.down-icon {
+  position:absolute;
+  width: 19px;
+  right: 4px;
+  top:17px;
+}
+.clear-icon {
+  position:absolute;
+  width: 90px;
+  right: 27px;
+  top:2px;
+}
+.reset-icon {
+  position:absolute;
+  width: 30px;
+  right: 4px;
+  top:2px;
+}
+.logout-icon1 {
+  position:absolute;
+  width: 25px;
+  right: 2px;
+  top:2px;
+}
+.h2{
+  position:absolute;
+  margin-top: -2px;
+  margin-left: 30px;
+}
+.log_out{
+  background-color:rgb(255, 40, 40);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position:absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  padding-right: 5px; 
+  font-weight: bolder;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Verification</title>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<body>
+    <div class="login-container">
+    <h2 class="login-heading">Doctor Verification</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+                {% for message in messages %}
+                    {% if "Email and phone number do not match" in message or "Invalid doctor ID" in message %}
+                        <p style="color: red;">{{ message }}</p>
+                    {% else %}
+                        <p style="color: green;">{{ message }}</p>
+                    {% endif %}
+                {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+    <form action="/verify" method="post">
+        <input type="text" id="doctor_id" name="doctor_id" placeholder="Doctor ID" class="input-field"><br><br>
+        <input type="email" id="email" name="email" placeholder="Email" class="input-field"><br><br>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" class="input-field"><br><br>
+        <input type="submit" value="Send OTP" class="login-btn">
+    </form></div>
+</body>
+</html>

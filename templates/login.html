@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Login</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+<body>
+<div class="login-container">
+    <h2 class="login-heading">Doctor Login</h2>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post" >
+        <label for="doctor_id">Doctor ID:</label><br>
+        <input type="text" id="doctor_id" name="doctor_id" class="login-input"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" class="login-input"><br><br>
+        <input type="submit" value="Login" class="login-btn">
+    </form><br>
+    <a href="/forget_password">Forget Password</a>
+</div>
+</body>
+</html>
